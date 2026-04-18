@@ -10,7 +10,7 @@ const Layout = ({ children }) => {
       </div>
       <div className="main-content">
         <header className="main-header">
-          <h1>Title: “A brief tour of Procedural Generation”</h1>
+          <h1>“A brief tour of Procedural Generation”</h1>
         </header>
         {children}
       </div>

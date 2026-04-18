@@ -26,8 +26,8 @@ body, html {
 .sidebar {
   width: var(--sidebar-width);
   flex-shrink: 0;
-  border-left: 1px solid var(--border-color);
-  border-right: 1px solid var(--border-color);
+  border-left: none;
+  border-right: none;
   background-color: #f4f4f4;
   background-size: cover;
   background-repeat: repeat-y;
@@ -60,12 +60,12 @@ body, html {
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  border-top: 1px solid var(--border-color);
+  border-top: none;
 }
 
 .main-header {
   text-align: center;
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: none;
   padding: 1.5rem;
 }
 
@@ -79,7 +79,7 @@ body, html {
 .intro-section {
   text-align: center;
   padding: 4rem 2rem;
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: none;
   font-size: 1.25rem;
   color: #666;
 }
@@ -111,7 +111,7 @@ body, html {
 
 .buffer-space {
   height: 40px;
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: none;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -129,7 +129,7 @@ body, html {
 }
 
 .content-heading {
-  border: 1px solid var(--border-color);
+  border: none;
   padding: 0.5rem 3rem;
 }
 
@@ -143,14 +143,14 @@ body, html {
 .content-text {
   padding: 2rem;
   text-align: center;
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: none;
   min-height: 150px;
   color: #666;
 }
 
 .content-image-wrapper {
   min-height: 250px;
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: none;
   display: flex;
   align-items: center;
   justify-content: center;
