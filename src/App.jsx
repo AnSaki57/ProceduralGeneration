@@ -9,19 +9,12 @@ function App() {
   return (
     <Layout>
       <IntroSection />
-      
-      <div className="secondary-content-start">
-        <p>Secondary content from here on out</p>
-        <div className="arrow-down">
-          |<br/>|<br/>V
-        </div>
-      </div>
 
       <div className="repeating-blocks">
         {contentData.map((data, index) => (
-          <ContentBlock 
-            key={data.id} 
-            heading={data.heading} 
+          <ContentBlock
+            key={data.id}
+            heading={data.heading}
             imageSrc={data.imageSrc}
           >
             <p>{data.textContent}</p>

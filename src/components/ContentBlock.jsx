@@ -4,7 +4,6 @@ const ContentBlock = ({ imageSrc, heading, children }) => {
   return (
     <div className="content-section">
       <div className="buffer-space">
-        <span className="buffer-text">Buffer space</span>
       </div>
       <div className="content-heading-wrapper">
         <div className="content-heading">
