@@ -21,7 +21,8 @@ export const contentData = [
     id: 4,
     heading: "",
     imageSrc: "https://images.unsplash.com/photo-1579373903781-fd5c0c30c4cd?auto=format&fit=crop&q=80&w=800",
-    textContent: "Sample text sample text",
+    textContent: "Sometimes, it's necessary to present procedural content without a primary heading, simply letting the text and image speak for themselves. This block demonstrates a secondary content subfield completely devoid of an introductory heading. Notice how the text directly follows the previous image buffer, allowing for a seamless transition into this new paragraph while keeping the 'align-justify' alignment to maintain an editorial newspaper-like column feel.",
+    caption: "A view of procedurally assembled terrain."
   },
   {
     id: 5,

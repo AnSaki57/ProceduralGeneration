@@ -5,11 +5,13 @@ const ContentBlock = ({ imageSrc, heading, caption, children }) => {
     <div className="content-section">
       <div className="buffer-space">
       </div>
-      <div className="content-heading-wrapper">
-        <div className="content-heading">
-          <h2>{heading}</h2>
+      {heading && (
+        <div className="content-heading-wrapper">
+          <div className="content-heading">
+            <h2>{heading}</h2>
+          </div>
         </div>
-      </div>
+      )}
       <div className="content-text">
         {children}
       </div>
