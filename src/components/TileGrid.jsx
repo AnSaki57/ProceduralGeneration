@@ -58,6 +58,7 @@ tileData.forEach((tile) => {
 const TileGrid = () => {
   // Use state to prevent blocking the initial render while computing the grid
   const [grid, setGrid] = useState(null);
+  const [visibleCount, setVisibleCount] = useState(0);
 
   useEffect(() => {
     // We compute this asynchronously so it doesn't freeze the page mount
@@ -78,21 +79,21 @@ const TileGrid = () => {
 
       const solve = (index) => {
         if (index === total) return true;
-        
+
         const r = Math.floor(index / cols);
         const c = index % cols;
-        
+
         const validTiles = getShuffledTiles().filter(t => {
           if (r > 0 && t.top !== resultGrid[index - cols].bottom) return false;
           if (c > 0 && t.left !== resultGrid[index - 1].right) return false;
           return true;
         });
-        
+
         for (const t of validTiles) {
           resultGrid[index] = t;
           if (solve(index + 1)) return true;
         }
-        
+
         resultGrid[index] = null;
         return false;
       };
@@ -109,6 +110,24 @@ const TileGrid = () => {
     setTimeout(computeGrid, 0);
   }, []);
 
+  useEffect(() => {
+    if (!grid) return;
+
+    // Create the illusion of tiles being placed in real-time, 1 by 1
+    const interval = setInterval(() => {
+      setVisibleCount(prev => {
+        if (prev >= grid.length) {
+          clearInterval(interval);
+          return grid.length;
+        }
+        // Revealing a row at a time or one by one. Let's do 3 tiles (1 row) to make it smooth but visible
+        return prev + 3;
+      });
+    }, 300);
+
+    return () => clearInterval(interval);
+  }, [grid]);
+
   if (!grid) {
     return (
       <div className="tile-grid">
@@ -122,13 +141,19 @@ const TileGrid = () => {
 
   return (
     <div className="tile-grid">
-      {grid.map((tileConfig, i) => (
-        <Tile 
-          key={i} 
-          type={tileConfig.img} 
-          rotation={tileConfig.rotation} 
-        />
-      ))}
+      {grid.map((tileConfig, i) => {
+        if (i < visibleCount) {
+          return (
+            <Tile
+              key={i}
+              type={tileConfig.img}
+              rotation={tileConfig.rotation}
+            />
+          );
+        } else {
+          return <div key={i} className="tile" style={{ backgroundColor: '#eee' }}></div>;
+        }
+      })}
     </div>
   );
 };
