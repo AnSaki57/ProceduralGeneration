@@ -19,12 +19,18 @@ export const contentData = [
   },
   {
     id: 4,
+    heading: "",
+    imageSrc: "https://images.unsplash.com/photo-1579373903781-fd5c0c30c4cd?auto=format&fit=crop&q=80&w=800",
+    textContent: "Sample text sample text",
+  },
+  {
+    id: 5,
     heading: "Spelunky's Level Design",
     imageSrc: "https://images.unsplash.com/photo-1579373903781-fd5c0c30c4cd?auto=format&fit=crop&q=80&w=800",
     textContent: "Spelunky blends handcrafted level templates with procedural assembly. It ensures that levels are mathematically solvable by combining pre-designed 'chunks' of rooms in a logical sequence, guaranteeing a playable path from start to finish.",
   },
   {
-    id: 5,
+    id: 6,
     heading: "Loot Generation in Diablo",
     imageSrc: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&q=80&w=800",
     textContent: "Beyond terrain, procedural generation is essential for itemization. Action RPGs like Diablo use procedural generation to determine weapon stats, magical affixes, and rarity levels, ensuring that players constantly find unique loot.",
