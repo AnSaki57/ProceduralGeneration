@@ -2,14 +2,15 @@
   --primary-bg: #ffffff;
   --text-color: #333333;
   --border-color: #000000;
-  --sidebar-width: 25vw;
+  --sidebar-width: 20vw;
 }
 
 * {
   box-sizing: border-box;
 }
 
-body, html {
+body,
+html {
   margin: 0;
   padding: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -39,11 +40,9 @@ body, html {
   overflow: hidden;
 }
 
-.left-sidebar {
-}
+.left-sidebar {}
 
-.right-sidebar {
-}
+.right-sidebar {}
 
 
 
@@ -63,25 +62,32 @@ body, html {
 
 .main-header h1 {
   margin: 0;
-  font-size: 2rem;
-  font-weight: normal;
-  color: #666;
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #0b3d91;
+  font-family: 'Arial', Helvetica, sans-serif;
 }
 
 .intro-section {
   text-align: center;
-  padding: 4rem 2rem;
-  border-bottom: none;
+  padding: 3rem 0;
+  width: 60%;
+  margin: 0 auto;
+  font-family: 'Georgia', serif;
   font-size: 1.25rem;
-  color: #666;
+  line-height: 1.8;
+  color: #333;
 }
 
 .secondary-content-start {
   text-align: center;
   padding: 3rem 0;
-  font-size: 1.5rem;
-  color: #666;
-  font-family: monospace;
+  width: 60%;
+  margin: 0 auto;
+  font-family: 'Georgia', serif;
+  font-size: 1.25rem;
+  line-height: 1.8;
+  color: #333;
 }
 
 .arrow-down {
@@ -102,7 +108,7 @@ body, html {
 }
 
 .buffer-space {
-  height: 40px;
+  height: 120px;
   border-bottom: none;
   display: flex;
   align-items: center;
@@ -115,7 +121,7 @@ body, html {
 }
 
 .content-heading-wrapper {
-  padding: 1rem;
+  padding: 0;
   display: flex;
   justify-content: center;
 }
@@ -127,26 +133,40 @@ body, html {
 
 .content-heading h2 {
   margin: 0;
-  font-weight: bold;
-  color: #333;
-  font-size: 1.75rem;
+  font-weight: 700;
+  color: #0b3d91;
+  font-size: 2rem;
+  font-family: 'Arial', Helvetica, sans-serif;
 }
 
 .content-text {
-  padding: 2rem;
-  text-align: center;
-  border-bottom: none;
-  min-height: 150px;
-  color: #666;
+  padding: 0.5rem 0 2rem 0;
+  width: 60%;
+  margin: 0 auto;
+  text-align: left;
+  font-family: 'Georgia', serif;
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: #333;
 }
 
 .content-image-wrapper {
   min-height: 250px;
   border-bottom: none;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   background-color: #fafafa;
+}
+
+.image-caption {
+  font-size: 0.9rem;
+  color: #666;
+  font-family: 'Arial', Helvetica, sans-serif;
+  margin-top: 0.75rem;
+  text-align: center;
+  width: 80%;
 }
 
 .content-image {

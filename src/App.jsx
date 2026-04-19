@@ -16,6 +16,7 @@ function App() {
             key={data.id}
             heading={data.heading}
             imageSrc={data.imageSrc}
+            caption={data.caption}
           >
             <p>{data.textContent}</p>
           </ContentBlock>

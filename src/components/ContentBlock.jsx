@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ContentBlock = ({ imageSrc, heading, children }) => {
+const ContentBlock = ({ imageSrc, heading, caption, children }) => {
   return (
     <div className="content-section">
       <div className="buffer-space">
@@ -15,7 +15,10 @@ const ContentBlock = ({ imageSrc, heading, children }) => {
       </div>
       <div className="content-image-wrapper">
         {imageSrc ? (
-          <img src={imageSrc} alt={heading} className="content-image" />
+          <>
+            <img src={imageSrc} alt={heading} className="content-image" />
+            {caption && <div className="image-caption">{caption}</div>}
+          </>
         ) : (
           <p className="image-placeholder">Image #n</p>
         )}
