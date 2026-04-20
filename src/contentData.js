@@ -5,6 +5,10 @@ export const contentData = [
     imageSrc: "https://images.unsplash.com/photo-1611891487122-207579d67d98?auto=format&fit=crop&q=80&w=800",
     textContent: "Carcassonne is a classic tile-placement board game where players draw and place tiles to build a medieval landscape. Each tile represents a piece of southern French geography, complete with cities, roads, cloisters, and fields. The elegance of Carcassonne lies in how complex, organic, and entirely unique maps emerge from simple placement rules.",
     caption: "An image of someone's Carcassonne board.",
+    funFact: {
+      content: "The real-world city of Carcassonne is a medieval fortress in southern France. Its stunning walled city is a UNESCO World Heritage site!",
+      yAxis: "150px"
+    }
   },
   {
     id: 2,
@@ -19,6 +23,10 @@ export const contentData = [
     imageSrc: "https://images.unsplash.com/photo-1552820728-8b83bb6b773f?auto=format&fit=crop&q=80&w=800",
     textContent: "When we automate the placement of these tiles using software, we enter the realm of procedural generation. An algorithm can quickly scan the board, determine all legal moves for a given coordinate by checking its neighbors, and randomly select a valid tile from the pool. While random, the output is constrained by the ruleset, creating layouts that are chaotic yet structurally sound.",
     caption: "Note that in the following empty space, there are multiple types of tiles that could be placed legally.",
+    funFact: {
+      content: "",
+      yAxis: "0px"
+    }
   },
   {
     id: 4,

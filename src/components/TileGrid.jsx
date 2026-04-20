@@ -1,4 +1,4 @@
-import React, { useMemo, useState, useEffect } from 'react';
+import React, { useMemo, useState, useEffect, useRef } from 'react';
 import Tile from './Tile';
 import gggg from '../assets/tiles/gggg.png';
 import ggrg from '../assets/tiles/ggrg.png';
@@ -56,14 +56,49 @@ tileData.forEach((tile) => {
 });
 
 const TileGrid = () => {
+  const containerRef = useRef(null);
   // Use state to prevent blocking the initial render while computing the grid
   const [grid, setGrid] = useState(null);
   const [visibleCount, setVisibleCount] = useState(0);
+  const [dimensions, setDimensions] = useState({ rows: 100 });
+
+  useEffect(() => {
+    if (!containerRef.current) return;
+    const parent = containerRef.current.parentNode;
+    let timeoutId = null;
+
+    const observer = new ResizeObserver((entries) => {
+      for (let entry of entries) {
+        if (timeoutId) clearTimeout(timeoutId);
+        timeoutId = setTimeout(() => {
+          const { width, height } = entry.contentRect;
+          if (width > 0 && height > 0) {
+            const cols = 3;
+            const tileHeight = width / cols;
+            const neededRows = Math.ceil(height / tileHeight);
+            
+            setDimensions(prev => {
+              if (Math.abs(prev.rows - neededRows) > 2) {
+                return { rows: neededRows };
+              }
+              return prev;
+            });
+          }
+        }, 300);
+      }
+    });
+
+    observer.observe(parent);
+    return () => {
+      if (timeoutId) clearTimeout(timeoutId);
+      observer.disconnect();
+    };
+  }, []);
 
   useEffect(() => {
     // We compute this asynchronously so it doesn't freeze the page mount
     const computeGrid = () => {
-      const rows = 100;
+      const rows = dimensions.rows;
       const cols = 3;
       const total = rows * cols;
       const resultGrid = new Array(total).fill(null);
@@ -106,9 +141,14 @@ const TileGrid = () => {
       }
     };
 
+    // Reset grid when dimensions change to trigger skeleton
+    setGrid(null);
+    setVisibleCount(0);
+
     // Use setTimeout to allow the browser to paint first
-    setTimeout(computeGrid, 0);
-  }, []);
+    const timeout = setTimeout(computeGrid, 0);
+    return () => clearTimeout(timeout);
+  }, [dimensions]);
 
   useEffect(() => {
     if (!grid) return;
@@ -130,9 +170,9 @@ const TileGrid = () => {
 
   if (!grid) {
     return (
-      <div className="tile-grid">
+      <div className="tile-grid" ref={containerRef}>
         {/* Placeholder skeleton while generating */}
-        {Array.from({ length: 300 }).map((_, i) => (
+        {Array.from({ length: dimensions.rows * 3 }).map((_, i) => (
           <div key={i} className="tile" style={{ backgroundColor: '#eee' }}></div>
         ))}
       </div>
@@ -140,7 +180,7 @@ const TileGrid = () => {
   }
 
   return (
-    <div className="tile-grid">
+    <div className="tile-grid" ref={containerRef}>
       {grid.map((tileConfig, i) => {
         if (i < visibleCount) {
           return (

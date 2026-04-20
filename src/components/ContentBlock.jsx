@@ -1,8 +1,13 @@
 import React from 'react';
 
-const ContentBlock = ({ imageSrc, heading, caption, children }) => {
+const ContentBlock = ({ imageSrc, heading, caption, funFact, children }) => {
   return (
     <div className="content-section">
+      {funFact && (
+        <div className="fun-fact" style={{ top: funFact.yAxis || '100px' }}>
+          <strong>Fun Fact:</strong> {funFact.content}
+        </div>
+      )}
       <div className="buffer-space">
       </div>
       {heading && (

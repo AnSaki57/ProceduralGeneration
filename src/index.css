@@ -105,6 +105,7 @@ html {
   display: flex;
   flex-direction: column;
   margin: 0;
+  position: relative;
 }
 
 .buffer-space {
@@ -184,6 +185,9 @@ html {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .tile {
@@ -203,6 +207,7 @@ html {
     opacity: 0;
     transform: scale(0.9);
   }
+
   100% {
     opacity: 1;
     transform: scale(1);
@@ -211,4 +216,18 @@ html {
 
 .tile-animated {
   animation: tileReveal 0.25s ease-out both;
+}
+
+.fun-fact {
+  position: absolute;
+  right: 3%;
+  width: 14%;
+  background: #2b60b5;
+  border: 2px solid #0b3d91;
+  border-radius: 8px;
+  padding: 1rem;
+  font-size: 0.85rem;
+  font-family: 'Arial', sans-serif;
+  color: #ffffff;
+  box-sizing: border-box;
 }

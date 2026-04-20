@@ -17,6 +17,7 @@ function App() {
             heading={data.heading}
             imageSrc={data.imageSrc}
             caption={data.caption}
+            funFact={data.funFact}
           >
             <p>{data.textContent}</p>
           </ContentBlock>
