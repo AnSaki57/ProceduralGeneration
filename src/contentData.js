@@ -3,11 +3,11 @@ export const contentData = [
     id: 1,
     heading: "A primer: the game of Carcassonne",
     imageSrc: "https://images.unsplash.com/photo-1611891487122-207579d67d98?auto=format&fit=crop&q=80&w=800",
-    textContent: "Carcassonne is a classic tile-placement board game where players draw and place tiles to build a medieval landscape. Each tile represents a piece of southern French geography, complete with cities, roads, cloisters, and fields. The elegance of Carcassonne lies in how complex, organic, and entirely unique maps emerge from simple placement rules.",
+    textContent: "Carcassonne is a simple tile-placement board game where players place tiles to build a medieval landscape. Each tile represents a piece of French geography, with cities, roads, monasteries, and fields. With simple placement rules, a game can lead to the creation of some uniquely beautiful terrain.",
     caption: "An image of someone's Carcassonne board.",
     funFacts: [
       {
-        content: "\nThe carcassonne grids you see on either side of this webpage are procedurally generated, right on your device.",
+        content: "\nThe carcassonne grids you see on either side of this webpage are procedurally generated, right on your device. Refresh the page, and you'll get a new pattern.",
         yAxis: "150px"
       }
     ]
@@ -29,7 +29,7 @@ export const contentData = [
     id: 3,
     heading: "Random generation and Carcassonne",
     imageSrc: "https://images.unsplash.com/photo-1552820728-8b83bb6b773f?auto=format&fit=crop&q=80&w=800",
-    textContent: "When we automate the placement of these tiles using software, we enter the realm of procedural generation. An algorithm can quickly scan the board, determine all legal moves for a given coordinate by checking its neighbors, and randomly select a valid tile from the pool. While random, the output is constrained by the ruleset, creating layouts that are chaotic yet structurally sound.",
+    textContent: "Enter procedural generation. Why take the pain of placing each tile by hand, when a machine can do it for you?\n Select a random place to place a tile, and go through all the tiles that will match that area. Repeat this through an algorithm, and pretty soon you will get a nice board of your own!",
     caption: "Note that in the following empty space, there are multiple types of tiles that could be placed legally.",
     funFacts: [
       {
