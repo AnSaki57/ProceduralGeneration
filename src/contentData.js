@@ -5,17 +5,25 @@ export const contentData = [
     imageSrc: "https://images.unsplash.com/photo-1611891487122-207579d67d98?auto=format&fit=crop&q=80&w=800",
     textContent: "Carcassonne is a classic tile-placement board game where players draw and place tiles to build a medieval landscape. Each tile represents a piece of southern French geography, complete with cities, roads, cloisters, and fields. The elegance of Carcassonne lies in how complex, organic, and entirely unique maps emerge from simple placement rules.",
     caption: "An image of someone's Carcassonne board.",
-    funFact: {
-      content: "The real-world city of Carcassonne is a medieval fortress in southern France. Its stunning walled city is a UNESCO World Heritage site!",
-      yAxis: "150px"
-    }
+    funFacts: [
+      {
+        content: "\nThe carcassonne grids you see on either side of this webpage are procedurally generated, right on your device.",
+        yAxis: "150px"
+      }
+    ]
   },
   {
     id: 2,
     heading: "Rules of Carcassonne",
     imageSrc: "https://images.unsplash.com/photo-1585620385456-4759f9b5c7d9?auto=format&fit=crop&q=80&w=800",
     textContent: "The core mechanic of Carcassonne revolves around constraint-based placement. You cannot simply put any tile anywhere; the edges must seamlessly connect to the adjacent tiles. If a tile features a road on its left edge, it must be placed next to a tile that has a road on its right edge. This simple rule forces the players to collaborate in building a globally coherent map, mirroring the basic principles of algorithmic procedural generation.",
-    caption: "Roads must match roads, towns for towns, and grass for grass. You can place tiles only beside already placed tiles."
+    caption: "Roads must match roads, towns for towns, and grass for grass. You can place tiles only beside already placed tiles.",
+    funFacts: [
+      {
+        content: "Look again at the Carcassone grids. If on any 2 tiles meeting, you find a road abruptly ending, or a city meeting open grass without any walls, it means my algorithm has failed. See if you can spot such inconsistencies!",
+        yAxis: "500px"
+      }
+    ]
   },
   {
     id: 3,
@@ -23,10 +31,16 @@ export const contentData = [
     imageSrc: "https://images.unsplash.com/photo-1552820728-8b83bb6b773f?auto=format&fit=crop&q=80&w=800",
     textContent: "When we automate the placement of these tiles using software, we enter the realm of procedural generation. An algorithm can quickly scan the board, determine all legal moves for a given coordinate by checking its neighbors, and randomly select a valid tile from the pool. While random, the output is constrained by the ruleset, creating layouts that are chaotic yet structurally sound.",
     caption: "Note that in the following empty space, there are multiple types of tiles that could be placed legally.",
-    funFact: {
-      content: "",
-      yAxis: "0px"
-    }
+    funFacts: [
+      {
+        content: "We've had one fun fact, all right.",
+        yAxis: "300px"
+      },
+      {
+        content: "What about second fun fact?",
+        yAxis: "600px"
+      }
+    ]
   },
   {
     id: 4,

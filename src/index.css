@@ -192,7 +192,8 @@ html {
 
 .tile {
   aspect-ratio: 1 / 1;
-  border: 1px solid #ccc;
+  /* border: 1px solid #ccc; */
+  border: none;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -205,7 +206,7 @@ html {
 @keyframes tileReveal {
   0% {
     opacity: 0;
-    transform: scale(0.9);
+    transform: scale(0.6);
   }
 
   100% {
@@ -215,13 +216,13 @@ html {
 }
 
 .tile-animated {
-  animation: tileReveal 0.25s ease-out both;
+  animation: tileReveal 3.25s ease-out both;
 }
 
 .fun-fact {
   position: absolute;
-  right: 3%;
-  width: 14%;
+  right: 2%;
+  width: 16%;
   background: #2b60b5;
   border: 2px solid #0b3d91;
   border-radius: 8px;
@@ -230,4 +231,5 @@ html {
   font-family: 'Arial', sans-serif;
   color: #ffffff;
   box-sizing: border-box;
+  text-align: justify;
 }
