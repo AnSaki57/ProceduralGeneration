@@ -20,7 +20,7 @@ export const contentData = [
     caption: "Roads must match roads, towns for towns, and grass for grass. You can place tiles only beside already placed tiles.",
     funFacts: [
       {
-        content: "Look again at the Carcassone grids. If on any 2 tiles meeting, you find a road abruptly ending, or a city meeting open grass without any walls, it means my algorithm has failed. See if you can spot such inconsistencies!",
+        content: "Look again at the Carcassone grids. If on any 2 tiles meeting, you find a road abruptly ending, or a city meeting open grass without any walls, it means my algorithm has failed. \nSee if you can spot such inconsistencies!",
         yAxis: "500px"
       }
     ]
@@ -107,24 +107,22 @@ export const contentData = [
   },
   {
     id: 13,
-    heading: "Rules of a simple L-system",
-    imageSrc: "https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?auto=format&fit=crop&q=80&w=800",
-    textContent: "An L-system starts with an initial string (the 'axiom') and a set of production rules. For example, a simple rule might be: 'Replace every straight branch with a branch that splits into two smaller branches'. In the first iteration, a single line becomes a Y-shape.",
-    caption: "A simple stem with 2 branches and 4 sub-branches. Each branch spawns two children branches at +45deg and -45deg angles to the main, with half the length of the parent.",
-  },
-  {
-    id: 14,
-    heading: "",
-    imageSrc: "https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&q=80&w=800",
-    textContent: "When the rule is applied recursively to the new string, the ends of the 'Y' spawn their own smaller Y-shapes. This iterative expansion quickly produces geometrically complex, self-similar fractals that mathematically mimic how a real sapling sprouts its offshoots.",
-    caption: "Continuation of the pattern to another level",
-  },
-  {
-    id: 15,
-    heading: "",
-    imageSrc: "https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&q=80&w=800",
-    textContent: "After just a handful of iterations (usually around 5 to 7), the simple character string translates into a highly detailed, sprawling 3D tree. By slightly randomizing the angles and lengths during rendering, developers can spawn entire forests where no two trees are exactly alike, despite following the exact same genetic rule.",
-    caption: "7 Levels of the fractal-like tree",
+    heading: "Growth of an L-system",
+    textContent: "An L-system starts with an initial string (the 'axiom') and a set of production rules. For example, a simple rule might be: 'Replace every straight branch with a branch that splits into two smaller branches'. \n\nScroll through the following images to see how this simple recursive rule produces geometric complexity that mimics real saplings.",
+    multiImages: [
+      {
+        src: "https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?auto=format&fit=crop&q=80&w=1200",
+        caption: "Iteration 1: A single line becomes a simple Y-shape. Each branch spawns two children branches at +/- 45deg angles."
+      },
+      {
+        src: "https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&q=80&w=1200",
+        caption: "Iteration 3: The rule is applied recursively. The ends of the 'Y' spawn their own smaller Y-shapes, increasing self-similarity."
+      },
+      {
+        src: "https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&q=80&w=1200",
+        caption: "Iteration 7: After just a handful of repetitions, the character string translates into a highly detailed, sprawling 3D tree."
+      }
+    ]
   },
   {
     id: 16,

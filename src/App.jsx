@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Layout from './components/Layout';
 import IntroSection from './components/IntroSection';
 import ContentBlock from './components/ContentBlock';
+import MultiImage from './components/MultiImage';
 import { contentData } from './contentData';
 import './index.css';
 
@@ -9,7 +10,7 @@ const TABS = [
   { name: "Intro: Carcassonne", ids: [1, 2, 3] },
   { name: "Early procedural generation", ids: [4, 5, 6, 7, 8, 9, 10] },
   { name: "L-systems and cellular automata", ids: [11, 12, 13, 14, 15, 16, 17] },
-  { name: "Procedural generation in modern games", ids: [18, 19, 20, 21, 22, 23, 24, 25] },
+  { name: "Procedural Gen & modern games", ids: [18, 19, 20, 21, 22, 23, 24, 25] },
   { name: "More with procedural generation", ids: [26, 27, 28] },
   { name: "In summary", ids: [29, 30] }
 ];
@@ -43,17 +44,38 @@ function App() {
       {activeTab === 0 && <IntroSection />}
 
       <div className="repeating-blocks">
-        {filteredData.map((data, index) => (
-          <ContentBlock
-            key={data.id}
-            heading={data.heading}
-            imageSrc={data.imageSrc}
-            caption={data.caption}
-            funFacts={data.funFacts}
-          >
-            <p>{data.textContent}</p>
-          </ContentBlock>
-        ))}
+        {filteredData.map((data, index) => {
+          if (data.multiImages) {
+            return (
+              <div key={data.id}>
+                {data.heading && (
+                  <div className="content-heading-wrapper" style={{ marginTop: '4rem' }}>
+                    <div className="content-heading">
+                      <h2>{data.heading}</h2>
+                    </div>
+                  </div>
+                )}
+                {data.textContent && (
+                  <div className="content-text">
+                    <p>{data.textContent}</p>
+                  </div>
+                )}
+                <MultiImage images={data.multiImages} />
+              </div>
+            );
+          }
+          return (
+            <ContentBlock
+              key={data.id}
+              heading={data.heading}
+              imageSrc={data.imageSrc}
+              caption={data.caption}
+              funFacts={data.funFacts}
+            >
+              <p>{data.textContent}</p>
+            </ContentBlock>
+          );
+        })}
       </div>
     </Layout>
   );

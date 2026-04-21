@@ -3,7 +3,7 @@ import React from 'react';
 const IntroSection = () => {
   return (
     <section className="intro-section">
-      <p>Procedural generation is a method of creating data algorithmically as opposed to manually, typically through a combination of human-generated assets and algorithms coupled with computer-generated randomness and processing power. It is widely used in computer graphics and video games to create massive, endlessly replayable worlds.</p>
+      <p>Procedural generation is a method of creating data algorithmically as opposed to manually, through: human-generated assets, algorithms, randomness, and raw processing power. It's about letting the machine take over the task of making creative content through fairly deterministic rules.</p>
     </section>
   );
 };

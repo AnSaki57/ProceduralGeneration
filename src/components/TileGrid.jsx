@@ -60,40 +60,7 @@ const TileGrid = () => {
   // Use state to prevent blocking the initial render while computing the grid
   const [grid, setGrid] = useState(null);
   const [visibleCount, setVisibleCount] = useState(0);
-  const [dimensions, setDimensions] = useState({ rows: 100 });
-
-  useEffect(() => {
-    if (!containerRef.current) return;
-    const parent = containerRef.current.parentNode;
-    let timeoutId = null;
-
-    const observer = new ResizeObserver((entries) => {
-      for (let entry of entries) {
-        if (timeoutId) clearTimeout(timeoutId);
-        timeoutId = setTimeout(() => {
-          const { width, height } = entry.contentRect;
-          if (width > 0 && height > 0) {
-            const cols = 3;
-            const tileHeight = width / cols;
-            const neededRows = Math.ceil(height / tileHeight);
-            
-            setDimensions(prev => {
-              if (Math.abs(prev.rows - neededRows) > 2) {
-                return { rows: neededRows };
-              }
-              return prev;
-            });
-          }
-        }, 300);
-      }
-    });
-
-    observer.observe(parent);
-    return () => {
-      if (timeoutId) clearTimeout(timeoutId);
-      observer.disconnect();
-    };
-  }, []);
+  const [dimensions] = useState({ rows: 180 });
 
   useEffect(() => {
     // We compute this asynchronously so it doesn't freeze the page mount
@@ -141,14 +108,10 @@ const TileGrid = () => {
       }
     };
 
-    // Reset grid when dimensions change to trigger skeleton
-    setGrid(null);
-    setVisibleCount(0);
-
     // Use setTimeout to allow the browser to paint first
     const timeout = setTimeout(computeGrid, 0);
     return () => clearTimeout(timeout);
-  }, [dimensions]);
+  }, []); // Only run once on mount
 
   useEffect(() => {
     if (!grid) return;
