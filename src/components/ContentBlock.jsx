@@ -1,6 +1,7 @@
 import React from 'react';
+import MultiImage from './MultiImage';
 
-const ContentBlock = ({ imageSrc, heading, caption, funFacts, children }) => {
+const ContentBlock = ({ imageSrc, multiImages, heading, caption, funFacts, children }) => {
   return (
     <div className="content-section">
       {funFacts && funFacts.map((fact, index) => (
@@ -21,16 +22,21 @@ const ContentBlock = ({ imageSrc, heading, caption, funFacts, children }) => {
       <div className="content-text">
         {children}
       </div>
-      <div className="content-image-wrapper">
-        {imageSrc ? (
-          <>
-            <img src={imageSrc} alt={heading} className="content-image" />
-            {caption && <div className="image-caption">{caption}</div>}
-          </>
-        ) : (
-          <p className="image-placeholder">Image #n</p>
-        )}
-      </div>
+      
+      {multiImages ? (
+        <MultiImage images={multiImages} />
+      ) : (
+        <div className="content-image-wrapper">
+          {imageSrc ? (
+            <>
+              <img src={imageSrc} alt={heading} className="content-image" />
+              {caption && <div className="image-caption">{caption}</div>}
+            </>
+          ) : (
+            <p className="image-placeholder">Image #n</p>
+          )}
+        </div>
+      )}
     </div>
   );
 };

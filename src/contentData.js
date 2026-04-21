@@ -18,12 +18,34 @@ export const contentData = [
     imageSrc: "https://images.unsplash.com/photo-1585620385456-4759f9b5c7d9?auto=format&fit=crop&q=80&w=800",
     textContent: "The core mechanic of Carcassonne revolves around constraint-based placement. You cannot simply put any tile anywhere; the edges must seamlessly connect to the adjacent tiles. If a tile features a road on its left edge, it must be placed next to a tile that has a road on its right edge. This simple rule forces the players to collaborate in building a globally coherent map, mirroring the basic principles of algorithmic procedural generation.",
     caption: "Roads must match roads, towns for towns, and grass for grass. You can place tiles only beside already placed tiles.",
+    multiImages: [
+      {
+        src: "",
+        caption: "Road-edge to road-edge",
+      },
+      {
+        src: "",
+        caption: "Grass to grass",
+      },
+      {
+        src: "",
+        caption: "Town to town",
+      },
+      {
+        src: "",
+        caption: "Watch out! This town has no defensive wall; it stretches into open grass",
+      },
+      {
+        src: "",
+        caption: "This tile matches the feature on the right, but not the one to the top of it",
+      },
+    ],
     funFacts: [
       {
         content: "Look again at the Carcassone grids. If on any 2 tiles meeting, you find a road abruptly ending, or a city meeting open grass without any walls, it means my algorithm has failed. \nSee if you can spot such inconsistencies!",
-        yAxis: "500px"
+        yAxis: "200px"
       }
-    ]
+    ],
   },
   {
     id: 3,

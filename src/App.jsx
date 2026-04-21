@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import Layout from './components/Layout';
 import IntroSection from './components/IntroSection';
 import ContentBlock from './components/ContentBlock';
-import MultiImage from './components/MultiImage';
 import { contentData } from './contentData';
 import './index.css';
 
@@ -44,38 +43,18 @@ function App() {
       {activeTab === 0 && <IntroSection />}
 
       <div className="repeating-blocks">
-        {filteredData.map((data, index) => {
-          if (data.multiImages) {
-            return (
-              <div key={data.id}>
-                {data.heading && (
-                  <div className="content-heading-wrapper" style={{ marginTop: '4rem' }}>
-                    <div className="content-heading">
-                      <h2>{data.heading}</h2>
-                    </div>
-                  </div>
-                )}
-                {data.textContent && (
-                  <div className="content-text">
-                    <p>{data.textContent}</p>
-                  </div>
-                )}
-                <MultiImage images={data.multiImages} />
-              </div>
-            );
-          }
-          return (
-            <ContentBlock
-              key={data.id}
-              heading={data.heading}
-              imageSrc={data.imageSrc}
-              caption={data.caption}
-              funFacts={data.funFacts}
-            >
-              <p>{data.textContent}</p>
-            </ContentBlock>
-          );
-        })}
+        {filteredData.map((data, index) => (
+          <ContentBlock
+            key={data.id}
+            heading={data.heading}
+            imageSrc={data.imageSrc}
+            multiImages={data.multiImages}
+            caption={data.caption}
+            funFacts={data.funFacts}
+          >
+            <p>{data.textContent}</p>
+          </ContentBlock>
+        ))}
       </div>
     </Layout>
   );

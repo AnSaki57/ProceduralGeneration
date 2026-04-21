@@ -41,7 +41,7 @@ const MultiImage = ({ images }) => {
     <div 
       className="multi-image-container" 
       ref={containerRef}
-      style={{ height: `${(images.length + 1) * 80}vh` }} // Adjust height multiplier as needed
+      style={{ height: `${(images.length + 1) * 150}vh` }} // Increased height for longer scroll distance
     >
       <div className="multi-image-sticky">
         {images.map((img, i) => (
