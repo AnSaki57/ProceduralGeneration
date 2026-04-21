@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Layout from './components/Layout';
 import IntroSection from './components/IntroSection';
 import ContentBlock from './components/ContentBlock';
+import ModernGamesGrid from './components/ModernGamesGrid';
 import { contentData } from './contentData';
 import './index.css';
 
@@ -9,7 +10,7 @@ const TABS = [
   { name: "Intro: Carcassonne", ids: [1, 2, 3] },
   { name: "Early procedural generation", ids: [4, 5, 6, 7, 8, 9, 10] },
   { name: "L-systems and cellular automata", ids: [11, 12, 13, 14, 15, 16, 17] },
-  { name: "Procedural Gen & modern games", ids: [18, 19, 20, 21, 22, 23, 24, 25] },
+  { name: "Procedural Gen & modern games", ids: [18, 19] },
   { name: "More with procedural generation", ids: [26, 27, 28] },
   { name: "In summary", ids: [29, 30] }
 ];
@@ -43,18 +44,23 @@ function App() {
       {activeTab === 0 && <IntroSection />}
 
       <div className="repeating-blocks">
-        {filteredData.map((data, index) => (
-          <ContentBlock
-            key={data.id}
-            heading={data.heading}
-            imageSrc={data.imageSrc}
-            multiImages={data.multiImages}
-            caption={data.caption}
-            funFacts={data.funFacts}
-          >
-            <p>{data.textContent}</p>
-          </ContentBlock>
-        ))}
+        {filteredData.map((data, index) => {
+          if (data.isGameGrid) {
+            return <ModernGamesGrid key={data.id} games={data.games} />;
+          }
+          return (
+            <ContentBlock
+              key={data.id}
+              heading={data.heading}
+              imageSrc={data.imageSrc}
+              multiImages={data.multiImages}
+              caption={data.caption}
+              funFacts={data.funFacts}
+            >
+              <p>{data.textContent}</p>
+            </ContentBlock>
+          );
+        })}
       </div>
     </Layout>
   );

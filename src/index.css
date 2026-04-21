@@ -356,3 +356,112 @@ html {
   line-height: 1.5;
   white-space: pre-wrap;
 }
+
+.modern-games-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 0;
+  width: 100%;
+  margin: 0;
+}
+
+.game-box {
+  position: relative;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.initial-view {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.5s ease;
+  z-index: 1;
+}
+
+.game-box.is-hovered .initial-view {
+  opacity: 0;
+}
+
+.game-img,
+.game-img-hover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.game-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.5rem;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+  color: white;
+}
+
+.game-content h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.5rem;
+}
+
+.game-content p {
+  margin: 0;
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+.hover-view-self {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  z-index: 0;
+}
+
+.game-box.is-hovered .hover-view-self {
+  opacity: 1;
+  z-index: 2;
+}
+
+.neighbor-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease, visibility 0.4s;
+  z-index: 10;
+  text-align: center;
+}
+
+.game-box.neighbor-hovered .neighbor-overlay {
+  opacity: 1;
+  visibility: visible;
+}
+
+.neighbor-content h3 {
+  color: #333;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+}
+
+.neighbor-content p {
+  color: #666;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}

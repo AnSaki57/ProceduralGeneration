@@ -162,59 +162,47 @@ export const contentData = [
   },
   {
     id: 18,
-    heading: "Procedural Generation in media: Minecraft",
-    imageSrc: "https://images.unsplash.com/photo-1605379399642-870262d3d051?auto=format&fit=crop&q=80&w=800",
-    textContent: "Minecraft is arguably the most famous application of procedural generation in history. It combines 3D Perlin noise for terrain height, biome temperature/moisture maps to determine surface blocks, and structured algorithms for spawning villages, trees, and strongholds. The result is a practically infinite sandbox that feels meticulously hand-crafted.",
-    caption: "A standard scenery from Minecraft. Even the placement of the houses in the village (and the village on the map) is decided at random by the machine, but following some base rules. Except the blue sky, everything you see is procedurally generated.",
+    heading: "Procedural Generation and modern games",
+    textContent: "Games nowadays use procedural generation extensively. Take a look at some of the techniques used in some of the most popular games currently available.",
+    imageSrc: "https://i.sstatic.net/DAwB5.png",
   },
   {
     id: 19,
-    heading: "",
-    imageSrc: "https://images.unsplash.com/photo-1587595431973-160d0d94add1?auto=format&fit=crop&q=80&w=800",
-    textContent: "To ensure the world makes logical sense, Minecraft uses a multi-layered procedural approach. It evaluates 'temperature' and 'humidity' noise maps independently. Where high temperature overlaps with low humidity, a desert biome spawns. Where temperature is low, snow falls. This intersection of different procedural systems creates emergent ecological storytelling.",
-    caption: "A top view of some Minecraft terrain. The procedural generation engine makes sure biomes are internally consistent",
-  },
-  {
-    id: 20,
-    heading: "Procedural Generation in media: No man's sky",
-    imageSrc: "https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&q=80&w=800",
-    textContent: "No Man's Sky scaled procedural generation to an unprecedented galactic level. Instead of generating one world, its algorithm generates a universe of 18 quintillion planets. The game relies on a single deterministic seed, meaning the mathematics dictate exactly where every star is, and exactly what its planets look like, without storing any of it on a hard drive.",
-    caption: "A poster for the game",
-  },
-  {
-    id: 21,
-    heading: "",
-    imageSrc: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=800",
-    textContent: "Everything from the terrain, the sky color, the weather patterns, and the alien creatures are mathematically constructed. The creatures are assembled by taking base skeletal models and procedurally attaching different heads, limbs, and tails based on the planetary seed, resulting in an endless variety of bizarre alien life.",
-    caption: "A bunch of biomes you could end up encountering in the various planets of the game",
-  },
-  {
-    id: 22,
-    heading: "Procedural Generation in media: Terraria",
-    imageSrc: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80&w=800",
-    textContent: "Terraria applies these concepts to a 2D side-scrolling perspective. Its world generation happens entirely during the loading screen before a new game begins. It runs through multiple distinct 'passes'—first shaping the dirt, then carving the caves, then populating ores, and finally decorating the surface with flora and fauna.",
-    caption: "Some of the procedurally generated terrain of Terraria. The trees are intelligently spawned where there is greater incidence of sunlight.",
-  },
-  {
-    id: 23,
-    heading: "",
-    imageSrc: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&q=80&w=800",
-    textContent: "This multi-pass approach allows the algorithm to ensure strict gameplay requirements are met. It checks that enough essential resources have spawned, ensures that the Corruption/Crimson biomes are placed securely away from the player's starting spawn, and constructs the sprawling underground jungle with deliberate boundaries.",
-    caption: "A very zoomed-out image of a randomly-generated world in Terraria. Some features are chosen quite deliberately, like the diagonal bands of biomes in the middle, and the line of magma underneath. Some other features are more random, like the numerous spots in every biome where a second biome appears.",
-  },
-  {
-    id: 24,
-    heading: "Procedural Generation in media: Stardew valley",
-    imageSrc: "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&q=80&w=800",
-    textContent: "Even largely hand-crafted games lean on procedural generation for endless replayability. In Stardew Valley, the main town is meticulously hand-drawn, but the dangerous mines are procedurally generated each day. The algorithm drops rocks, ores, and enemies into a preset room template, providing a fresh layout every time the player descends.",
-    caption: "A cave in Stardew Valley. Even such a hand-crafted world generates the cave rocks at random - simply because the human effort is not worth it.",
-  },
-  {
-    id: 25,
-    heading: "",
-    imageSrc: "https://images.unsplash.com/photo-1506452815076-2e50cf60411a?auto=format&fit=crop&q=80&w=800",
-    textContent: "Because procedural systems rely on rules rather than static assets, they are highly extensible. Modders can easily inject new room templates, new ore types, or new monster spawn logic into the generator, instantly creating thousands of new possible floor layouts without drawing them by hand.",
-    caption: "This expansion mod would not have been possible without procedural generation.",
+    isGameGrid: true,
+    games: [
+      {
+        heading: "Minecraft",
+        initialImage: "https://images.unsplash.com/photo-1605379399642-870262d3d051?auto=format&fit=crop&q=80&w=800",
+        hoverImage: "https://images.unsplash.com/photo-1587595431973-160d0d94add1?auto=format&fit=crop&q=80&w=800",
+        initialText: "The most famous application of procedural generation. It combines Perlin noise for terrain with complex algorithms for biomes and villages.",
+        hoverHeading: "Emergent Ecosystems",
+        hoverText: "Minecraft evaluates 'temperature' and 'humidity' maps independently. This intersection creates coherent biomes like deserts and snowy tundras."
+      },
+      {
+        heading: "No Man's Sky",
+        initialImage: "https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&q=80&w=800",
+        hoverImage: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=800",
+        initialText: "Scaling procedural generation to 18 quintillion planets using a single deterministic seed to define an entire galaxy.",
+        hoverHeading: "Alien Biology",
+        hoverText: "Creatures are assembled by taking base skeletons and procedurally attaching heads, limbs, and tails based on the planetary seed."
+      },
+      {
+        heading: "Terraria",
+        initialImage: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80&w=800",
+        hoverImage: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&q=80&w=800",
+        initialText: "A 2D perspective where world generation happens in distinct 'passes'—shaping dirt, carving caves, and populating ores.",
+        hoverHeading: "The Multi-Pass Approach",
+        hoverText: "The algorithm ensures strict gameplay requirements, like placing Corruption biomes safely away from the player's spawn point."
+      },
+      {
+        heading: "Stardew Valley",
+        initialImage: "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&q=80&w=800",
+        hoverImage: "https://images.unsplash.com/photo-1506452815076-2e50cf60411a?auto=format&fit=crop&q=80&w=800",
+        initialText: "Combines hand-crafted charm with procedurally generated mines that refresh layouts, rocks, and enemies every single day.",
+        hoverHeading: "Infinite Extensibility",
+        hoverText: "Because systems rely on rules, modders can easily inject new room templates and monster logic to create thousands of layouts."
+      }
+    ]
   },
   {
     id: 26,
