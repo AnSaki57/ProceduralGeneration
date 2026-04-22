@@ -88,7 +88,7 @@ export const contentData = [
   {
     id: 7,
     heading: "Perlin noise: Procedural generation in DwarFort's 3D world",
-    imageSrc: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80&w=800",
+    imageSrc: "https://preview.redd.it/my-most-interesting-worldgen-on-steam-yet-v0-wo7h2ve7p48a1.jpg?auto=webp&s=02b11b2c3fd04d4b52a60c45648e345619e41674",
     textContent: "To create realistic natural landscapes, simple randomness isn't enough. Pure randomness looks like TV static. To generate the sweeping continents, oceans, and mountain ranges of Dwarf Fortress, the game relies heavily on gradient noise functions, the most famous of which is Perlin Noise, developed by Ken Perlin in 1983.",
     caption: "A randomly-generated world in Dwarf Fortress. The shape of this continent (and the islands beside it) are all generated through complex geometric functions that control properties like size, shape, roughness, texture (grasslands, mountains, rivers), and so much more.",
   },
@@ -214,7 +214,7 @@ export const contentData = [
   {
     id: 27,
     heading: "World generation in DwarFort: Stories and Histories",
-    imageSrc: "https://images.unsplash.com/photo-1455390582262-044cdead27d8?auto=format&fit=crop&q=80&w=800",
+    imageSrc: "http://dfst.ru/images/stories/1340788399_rbemtkyvftqvfpsgzdpttmpymebyqgkugbaugegcufsvbokrqv.png",
     textContent: "Because all these generated elements interlock—the dwarf, the artifact, the monster that stole it, the cave where it hides—the game acts as an endless story engine. Players aren't just reading a pre-written script; they are navigating a dynamic narrative web woven entirely by mathematical algorithms.",
     caption: "A long, complex gameplay-story that has clearly been going on for some time.",
   },
