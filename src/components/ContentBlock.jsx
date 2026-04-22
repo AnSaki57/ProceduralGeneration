@@ -25,18 +25,12 @@ const ContentBlock = ({ imageSrc, multiImages, heading, caption, funFacts, child
       
       {multiImages ? (
         <MultiImage images={multiImages} />
-      ) : (
+      ) : imageSrc ? (
         <div className="content-image-wrapper">
-          {imageSrc ? (
-            <>
-              <img src={imageSrc} alt={heading} className="content-image" />
-              {caption && <div className="image-caption">{caption}</div>}
-            </>
-          ) : (
-            <p className="image-placeholder">Image #n</p>
-          )}
+          <img src={imageSrc} alt={heading} className="content-image" />
+          {caption && <div className="image-caption">{caption}</div>}
         </div>
-      )}
+      ) : null}
     </div>
   );
 };

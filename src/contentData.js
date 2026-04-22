@@ -2,9 +2,9 @@ export const contentData = [
   {
     id: 1,
     heading: "A primer: the game of Carcassonne",
-    imageSrc: "https://images.unsplash.com/photo-1611891487122-207579d67d98?auto=format&fit=crop&q=80&w=800",
     textContent: "Carcassonne is a simple tile-placement board game where players place tiles to build a medieval landscape. Each tile represents a piece of French geography, with cities, roads, monasteries, and fields. With simple placement rules, a game can lead to the creation of some uniquely beautiful terrain.",
-    caption: "An image of someone's Carcassonne board.",
+    imageSrc: "https://i.redd.it/the-ultimate-game-of-carcassonne-v0-ckvo8sgt4kgd1.jpg?width=6936&format=pjpg&auto=webp&s=8c1499f99b4a5d3ed954c69b65e67158e650f862",
+    caption: "An image of someone's enormous Carcassonne board.",
     funFacts: [
       {
         content: "\nThe carcassonne grids you see on either side of this webpage are procedurally generated, right on your device. Refresh the page, and you'll get a new pattern.",
@@ -15,9 +15,9 @@ export const contentData = [
   {
     id: 2,
     heading: "Rules of Carcassonne",
-    imageSrc: "https://images.unsplash.com/photo-1585620385456-4759f9b5c7d9?auto=format&fit=crop&q=80&w=800",
+    // imageSrc: "https://images.unsplash.com/photo-1585620385456-4759f9b5c7d9?auto=format&fit=crop&q=80&w=800",
     textContent: "The core mechanic of Carcassonne revolves around constraint-based placement. You cannot simply put any tile anywhere; the edges must seamlessly connect to the adjacent tiles. If a tile features a road on its left edge, it must be placed next to a tile that has a road on its right edge. This simple rule forces the players to collaborate in building a globally coherent map, mirroring the basic principles of algorithmic procedural generation.",
-    caption: "Roads must match roads, towns for towns, and grass for grass. You can place tiles only beside already placed tiles.",
+    // caption: "Roads must match roads, towns for towns, and grass for grass. You can place tiles only beside already placed tiles.",
     multiImages: [
       {
         src: "",
@@ -67,21 +67,21 @@ export const contentData = [
   {
     id: 4,
     heading: "Nethack: the first \"Procedurally Generated\" Game",
-    imageSrc: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=800",
+    imageSrc: "https://store-images.s-microsoft.com/image/apps.25403.9007199266261533.7a01194b-e99a-4fe6-8f1a-84cb47cf4f77.dc1106a8-72e6-416b-95da-36ee4bdee044",
     textContent: "Long before modern graphics, early developers needed ways to create replayable content without manually designing hundreds of levels. Enter Rogue and its spiritual successor, NetHack. Released in the 1980s, NetHack generates a completely new, massive dungeon every time you start a game. It uses algorithms to dynamically carve out rooms, connect them with corridors, and scatter loot and monsters, ensuring no two runs are ever the same.",
-    caption: "Nethack being played on a terminal. The '@' sign represents the player.",
+    caption: "Nethack being played on an emulator. The '@' sign represents the player.",
   },
   {
     id: 5,
     heading: "Nethack's procedural generation system",
-    imageSrc: "https://images.unsplash.com/photo-1614332287897-cdc485fa562d?auto=format&fit=crop&q=80&w=800",
+    imageSrc: "https://i.imgur.com/fRFKp6N.gif",
     textContent: "NetHack's level generation relies on a technique called 'BSP' (Binary Space Partitioning) or simple room-and-corridor carving. The algorithm divides the grid into smaller sub-regions, places a rectangular room of random dimensions inside each region, and finally uses pathfinding to draw corridors connecting them. This guarantees the dungeon is both randomized and fully traversable.",
-    caption: "A simple dungeon layout",
+    caption: "A simple dungeon layout being built by an algorithm",
   },
   {
     id: 6,
     heading: "Dwarf Fortress: the world's most complex game",
-    imageSrc: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=800",
+    imageSrc: "https://uploads.golmedia.net/uploads/articles/article_media/20514821711706612753gol1.jpg",
     textContent: "If NetHack laid the groundwork, Dwarf Fortress took procedural generation to its absolute extreme. Tarn Adams' masterpiece doesn't just generate a map; it generates an entire living world. From the geological strata deep underground to the intricate ecosystems of underground flora and fauna, the algorithm simulates millions of years of geological and ecological history before you even spawn your first dwarf.",
     caption: "A 'cavern' in Dwarf Fortress. Almost everything that you see is procedurally generated: the walls of the cave, the trees, the mushrooms.. even the water level is procedurally generated beforehand. Only the Dwarven rooms are made by the player.",
   },
@@ -164,7 +164,7 @@ export const contentData = [
     id: 18,
     heading: "Procedural Generation and modern games",
     textContent: "Games nowadays use procedural generation extensively. Take a look at some of the techniques used in some of the most popular games currently available.",
-    imageSrc: "https://i.sstatic.net/DAwB5.png",
+    imageSrc: "",
   },
   {
     id: 19,
@@ -207,7 +207,7 @@ export const contentData = [
   {
     id: 26,
     heading: "World generation in DwarFort: Civilisations",
-    imageSrc: "https://images.unsplash.com/photo-1580130281320-0ef0754f2bf7?auto=format&fit=crop&q=80&w=800",
+    imageSrc: "https://dwarffortresswiki.org/images/a/a5/BasicWorldGen.png",
     textContent: "Procedural generation isn't just for geometry. In Dwarf Fortress, after the physical world is created, the game simulates the passage of time. It spawns historical figures with personality traits, simulates their migrations, tracks their battles, records their marriages, and logs the artifacts they forge. It literally generates the sociopolitical history of a fantasy world.",
     caption: "The world creation menu. You can generate a thousand years of history simulating hundreds of empires, nations, societies, and tribes with enough lore to fill a real-life novel. All of this is procedurally generated, down to the smallest phrase or historical event.",
   },
