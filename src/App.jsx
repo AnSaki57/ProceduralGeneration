@@ -8,11 +8,11 @@ import './index.css';
 
 const TABS = [
   { name: "Intro: Carcassonne", ids: [1, 2, 3] },
-  { name: "Early procedural generation", ids: [4, 5, 6, 7, 8, 9, 10] },
-  { name: "L-systems and cellular automata", ids: [11, 12, 13, 14, 15, 16, 17] },
-  { name: "Procedural Gen & modern games", ids: [18, 19] },
-  { name: "More with procedural generation", ids: [26, 27, 28] },
-  { name: "In summary", ids: [29, 30] }
+  { name: "Early procedural generation", ids: [4, 5, 6, 7, 8] },
+  { name: "L-systems and cellular automata", ids: [9, 10, 11, 12, 13, 14] },
+  { name: "Procedural Gen & modern games", ids: [15, 16] },
+  { name: "More with procedural generation", ids: [17, 18, 19] },
+  { name: "In summary", ids: [20, 21] }
 ];
 
 function App() {
