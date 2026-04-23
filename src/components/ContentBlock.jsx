@@ -1,7 +1,7 @@
 import React from 'react';
 import MultiImage from './MultiImage';
 
-const ContentBlock = ({ imageSrc, multiImages, heading, caption, funFacts, children }) => {
+const ContentBlock = ({ imageSrc, videoSrc, multiImages, heading, caption, funFacts, children }) => {
   return (
     <div className="content-section">
       {funFacts && funFacts.map((fact, index) => (
@@ -25,6 +25,29 @@ const ContentBlock = ({ imageSrc, multiImages, heading, caption, funFacts, child
       
       {multiImages ? (
         <MultiImage images={multiImages} />
+      ) : videoSrc ? (
+        <div className="content-video-wrapper">
+          {videoSrc.includes('.mp4') || videoSrc.includes('v.redd.it') ? (
+            <video 
+              src={videoSrc} 
+              className="content-video"
+              controls
+              muted
+              autoPlay
+              loop
+              playsInline
+            />
+          ) : (
+            <iframe 
+              src={videoSrc} 
+              title={heading}
+              className="content-video"
+              allowFullScreen
+              scrolling="no"
+            />
+          )}
+          {caption && <div className="image-caption">{caption}</div>}
+        </div>
       ) : imageSrc ? (
         <div className="content-image-wrapper">
           <img src={imageSrc} alt={heading} className="content-image" />

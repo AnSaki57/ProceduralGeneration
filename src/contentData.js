@@ -55,19 +55,9 @@ export const contentData = [
   {
     id: 3,
     heading: "Random generation and Carcassonne",
-    imageSrc: "https://i0.wp.com/www.myboardgameguides.com/wp-content/uploads/2024/04/Carcassonne-Block2.jpg?ssl=1",
+    videoSrc: "https://v.redd.it/g0mfd2j8zivf1/DASH_1080.mp4?source=fallback",
     textContent: "Enter procedural generation. Why take the pain of placing each tile by hand, when a machine can do it for you?\n Select a random place to place a tile, and go through all the tiles that will match that area. Repeat this through an algorithm, and pretty soon you will get a nice board of your own!",
-    caption: "Note that in the following empty space, there are multiple types of tiles that could be placed legally. However, among the 4, only the highlighted tile is the correct choice.",
-    // funFacts: [
-    //   {
-    //     content: "We've had one fun fact, all right.",
-    //     yAxis: "300px"
-    //   },
-    //   {
-    //     content: "What about second fun fact?",
-    //     yAxis: "600px"
-    //   }
-    // ],
+    caption: "A timelapse of a 1000-tile Carcassonne game, generated procedurally by 2 bots.",
   },
   {
     id: 4,

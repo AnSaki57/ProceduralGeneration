@@ -53,6 +53,7 @@ function App() {
               key={data.id}
               heading={data.heading}
               imageSrc={data.imageSrc}
+              videoSrc={data.videoSrc}
               multiImages={data.multiImages}
               caption={data.caption}
               funFacts={data.funFacts}
