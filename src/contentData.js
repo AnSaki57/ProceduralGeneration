@@ -258,7 +258,14 @@ export const contentData = [
     id: 21,
     heading: "In conclusion..",
     textContent: "As computing power increases, the algorithms driving these generations will only become more sophisticated. From creating endless galaxies in video games to modeling the complex webs of human society, procedural generation stands as one of the most powerful intersections between pure mathematics and boundless creativity.",
-    imageSrc: "https://cdn.matthewjamestaylor.com/img/kidney-shaped-tree-fractal.jpg",
-    caption: "An interesting tree made from an L-system",
+    imageSrc: "https://i.redd.it/8geouuzk4zu71.gif",
+    caption: "Interesting trees made from an L-system setup by a Reddit user",
   },
+  {
+    id: 22,
+    heading: "",
+    textContent: "",
+    imageSrc: "https://i.redd.it/39vttpohxdg31.gif",
+    caption: "Pushing the limits of L-system generation!",
+  }
 ];

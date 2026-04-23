@@ -12,7 +12,7 @@ const TABS = [
   { name: "L-systems and cellular automata", ids: [9, 10, 11, 12, 13, 14] },
   { name: "Procedural Gen & modern games", ids: [15, 16] },
   { name: "More with procedural generation", ids: [17, 18, 19] },
-  { name: "In summary", ids: [20, 21] }
+  { name: "In summary", ids: [20, 21, 22] }
 ];
 
 function App() {
