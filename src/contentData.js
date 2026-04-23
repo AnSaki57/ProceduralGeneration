@@ -1,3 +1,10 @@
+import RoadRoad from './assets/imgs/RoadRoad.png';
+import GrassGrass from './assets/imgs/GrassGrass.png';
+import TownTown from './assets/imgs/TownTown.png';
+import HalfMatch from './assets/imgs/HalfMatch.png';
+import OpenTown from './assets/imgs/OpenTown.png';
+import TownSimResch from './assets/imgs/TownSimResch.png';
+
 export const contentData = [
   {
     id: 1,
@@ -18,23 +25,23 @@ export const contentData = [
     textContent: "The core mechanic of Carcassonne revolves around constraint-based placement. You cannot simply put any tile anywhere; the edges must seamlessly connect to the adjacent tiles. If a tile features a road on its left edge, it must be placed next to a tile that has a road on its right edge. This simple rule forces the players to collaborate in building a globally coherent map, mirroring the basic principles of algorithmic procedural generation.",
     multiImages: [
       {
-        src: "",
+        src: RoadRoad,
         caption: "Road-edge to road-edge",
       },
       {
-        src: "",
+        src: GrassGrass,
         caption: "Grass to grass",
       },
       {
-        src: "",
+        src: TownTown,
         caption: "Town to town",
       },
       {
-        src: "",
-        caption: "Watch out! This town has no defensive wall; it stretches into open grass",
+        src: OpenTown,
+        caption: "Watch out! This town in the middle has no defensive wall; it stretches into open grass",
       },
       {
-        src: "",
+        src: HalfMatch,
         caption: "This tile matches the feature on the right, but not the one to the top of it",
       },
     ],
@@ -48,19 +55,19 @@ export const contentData = [
   {
     id: 3,
     heading: "Random generation and Carcassonne",
-    imageSrc: "https://images.unsplash.com/photo-1552820728-8b83bb6b773f?auto=format&fit=crop&q=80&w=800",
+    imageSrc: "https://i0.wp.com/www.myboardgameguides.com/wp-content/uploads/2024/04/Carcassonne-Block2.jpg?ssl=1",
     textContent: "Enter procedural generation. Why take the pain of placing each tile by hand, when a machine can do it for you?\n Select a random place to place a tile, and go through all the tiles that will match that area. Repeat this through an algorithm, and pretty soon you will get a nice board of your own!",
-    caption: "Note that in the following empty space, there are multiple types of tiles that could be placed legally.",
-    funFacts: [
-      {
-        content: "We've had one fun fact, all right.",
-        yAxis: "300px"
-      },
-      {
-        content: "What about second fun fact?",
-        yAxis: "600px"
-      }
-    ]
+    caption: "Note that in the following empty space, there are multiple types of tiles that could be placed legally. However, among the 4, only the highlighted tile is the correct choice.",
+    // funFacts: [
+    //   {
+    //     content: "We've had one fun fact, all right.",
+    //     yAxis: "300px"
+    //   },
+    //   {
+    //     content: "What about second fun fact?",
+    //     yAxis: "600px"
+    //   }
+    // ],
   },
   {
     id: 4,
@@ -171,7 +178,7 @@ export const contentData = [
   {
     id: 14,
     heading: "Cellular automata: complexity from simplicity",
-    imageSrc: "https://images.unsplash.com/photo-1633511090164-b4bf7db1c305?auto=format&fit=crop&q=80&w=800",
+    imageSrc: "https://cdn.sanity.io/images/vgvol637/production/a0ed9ad54b55c627900a60f2285f2ba97df23c56-4250x2750.png?w=800",
     textContent: "The beauty of Cellular Automata lies in its emergent complexity. You don't program the final shape of the cave; you only program the localized rules for how a single square behaves based on its immediate neighbors. This localized simplicity scales up to create macro-structures that feel incredibly natural and remarkably complex.",
     caption: "Complex evolution of a system derived from 8 simple rules. The ruleset takes up just 3 bytes (0.003KB) and yet results in this chaotic pattern that's hard to predict.",
   },
@@ -246,7 +253,7 @@ export const contentData = [
   {
     id: 19,
     heading: "Beyond gaming: A society simulation",
-    imageSrc: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
+    imageSrc: TownSimResch,
     textContent: "These techniques are now stepping out of entertainment and into academia. Modern sociologists and economists use complex procedural simulations, similar to those in Dwarf Fortress, to model everything from traffic flow and disease spread to the emergent behavior of automated stock market trading bots. The game engines of today are becoming the predictive models of tomorrow.",
     caption: "The framework for the society simulator discussed in the paper.",
   },
