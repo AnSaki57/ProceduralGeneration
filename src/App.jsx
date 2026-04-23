@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useLayoutEffect } from 'react';
 import Layout from './components/Layout';
 import IntroSection from './components/IntroSection';
 import ContentBlock from './components/ContentBlock';
@@ -17,11 +17,19 @@ const TABS = [
 
 function App() {
   const [activeTab, setActiveTab] = useState(0);
+  const scrollPositions = useRef({});
 
   const handleTabClick = (index) => {
+    // Save the current scroll position of the window for the active tab
+    scrollPositions.current[activeTab] = window.scrollY;
     setActiveTab(index);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
+
+  useLayoutEffect(() => {
+    // Restore the scroll position for the newly active tab, defaulting to 0
+    const savedPosition = scrollPositions.current[activeTab] || 0;
+    window.scrollTo(0, savedPosition);
+  }, [activeTab]);
 
   const filteredData = contentData.filter(data => TABS[activeTab].ids.includes(data.id));
 
