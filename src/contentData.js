@@ -249,7 +249,7 @@ export const contentData = [
   },
   {
     id: 20,
-    heading: "To summarise..",
+    heading: "In summary..",
     textContent: "Procedural generation fundamentally changes how we create digital content. It shifts the role of the creator from 'architect' to 'god'. Instead of meticulously placing every single brick, the designer writes the rules of physics, plants a seed, and watches an entire universe grow on its own.",
     imageSrc: "https://pbs.twimg.com/media/EmbK4CmU4AE00rF?format=jpg&name=small",
     caption: "A cool-looking dungeon algorithm someone made on Twitter.",
