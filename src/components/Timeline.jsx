@@ -51,19 +51,19 @@ const Timeline = ({ events }) => {
   const translateX = -scrollProgress * Math.max(0, totalWidth - containerWidth);
 
   return (
-    <div 
-      className="timeline-sticky-wrapper" 
-      ref={sectionRef} 
+    <div
+      className="timeline-sticky-wrapper"
+      ref={sectionRef}
       style={{ height: `${events.length * 60}vh` }}
     >
       <div className="timeline-sticky-content">
-        <div className="timeline-header">
+        {/* <div className="timeline-header">
           <h2>Milestones in Procedural Generation</h2>
-        </div>
-        
+        </div> */}
+
         <div className="timeline-window" ref={containerRef}>
-          <div 
-            className="timeline-horizontal-container" 
+          <div
+            className="timeline-horizontal-container"
             ref={eventsRef}
             style={{ transform: `translateX(${translateX}px)` }}
           >

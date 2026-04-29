@@ -9,8 +9,7 @@ import './index.css';
 
 const TABS = [
   { name: "Intro: Carcassonne", ids: [1, 2, 3] },
-  { name: "Timeline", ids: [23] },
-  { name: "Early procedural generation", ids: [4, 5, 6, 7, 8] },
+  { name: "Early procedural generation", ids: [23, 4, 5, 6, 7, 8] },
   { name: "L-systems and cellular automata", ids: [9, 10, 11, 12, 13, 14] },
   { name: "Procedural Gen & modern games", ids: [15, 16] },
   { name: "More with procedural generation", ids: [17, 18, 19] },
@@ -33,7 +32,7 @@ function App() {
     window.scrollTo(0, savedPosition);
   }, [activeTab]);
 
-  const filteredData = contentData.filter(data => TABS[activeTab].ids.includes(data.id));
+  const filteredData = TABS[activeTab].ids.map(id => contentData.find(data => data.id === id)).filter(Boolean);
 
   const tabsRibbon = (
     <div className="tabs-ribbon">

@@ -18,7 +18,7 @@
 }
 
 .timeline-window {
-  width: 60%; /* This is the "secondary content's width" (aligned with intro text) */
+  width: 80%; /* Stretched slightly into the gap to give it visual space */
   margin: 0 auto;
   overflow: hidden;
   position: relative;
