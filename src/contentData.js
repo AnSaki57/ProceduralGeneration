@@ -267,5 +267,20 @@ export const contentData = [
     textContent: "",
     imageSrc: "https://i.redd.it/39vttpohxdg31.gif",
     caption: "Pushing the limits of L-system generation!",
+  },
+  {
+    id: 23,
+    isTimeline: true,
+    events: [
+      { year: "1968", text: "Lindenmayer Systems (L-systems) are introduced to model the growth processes of plants." },
+      { year: "1978", text: "Beneath Apple Manor becomes one of the first games to use procedural dungeon generation." },
+      { year: "1980", text: "Rogue is released, defining the 'Roguelike' genre with procedurally generated levels and permadeath." },
+      { year: "1983", text: "Ken Perlin develops Perlin Noise, a gradient noise function that revolutionizes natural texture and terrain generation." },
+      { year: "1984", text: "Elite uses procedural generation to fit a galaxy of thousands of planets into just 22 kilobytes of memory." },
+      { year: "1987", text: "NetHack expands on the Roguelike formula with incredibly deep, procedurally generated dungeon interactions." },
+      { year: "2006", text: "Dwarf Fortress begins its alpha, simulating entire worlds with geological, historical, and social depth." },
+      { year: "2011", text: "Minecraft is officially released, bringing procedural terrain generation into the mainstream global consciousness." },
+      { year: "2016", text: "No Man's Sky launches, demonstrating procedural generation on a galactic scale with 18 quintillion unique planets." }
+    ]
   }
 ];

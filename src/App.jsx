@@ -3,11 +3,13 @@ import Layout from './components/Layout';
 import IntroSection from './components/IntroSection';
 import ContentBlock from './components/ContentBlock';
 import ModernGamesGrid from './components/ModernGamesGrid';
+import Timeline from './components/Timeline';
 import { contentData } from './contentData';
 import './index.css';
 
 const TABS = [
   { name: "Intro: Carcassonne", ids: [1, 2, 3] },
+  { name: "Timeline", ids: [23] },
   { name: "Early procedural generation", ids: [4, 5, 6, 7, 8] },
   { name: "L-systems and cellular automata", ids: [9, 10, 11, 12, 13, 14] },
   { name: "Procedural Gen & modern games", ids: [15, 16] },
@@ -53,6 +55,9 @@ function App() {
 
       <div className="repeating-blocks">
         {filteredData.map((data, index) => {
+          if (data.isTimeline) {
+            return <Timeline key={data.id} events={data.events} />;
+          }
           if (data.isGameGrid) {
             return <ModernGamesGrid key={data.id} games={data.games} />;
           }
